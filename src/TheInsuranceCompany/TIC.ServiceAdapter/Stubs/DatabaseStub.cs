@@ -90,5 +90,13 @@ namespace TIC.ServiceAdapter.Stubs
         {
             return Insurances;
         }
+        public static IEnumerable<Insurance> GetAllDutchInsurances()
+        {
+            return Insurances
+        .OfType<TravelInsurance>()
+        .Where(x => x.Coverage.Any(c => c.Code.Equals("NL", StringComparison.OrdinalIgnoreCase)))
+        .ToList();
+
+        }
     }
 }

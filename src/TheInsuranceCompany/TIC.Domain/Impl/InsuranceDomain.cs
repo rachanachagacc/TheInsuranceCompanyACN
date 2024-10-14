@@ -22,5 +22,10 @@ namespace TIC.DomainAPI.Impl
         {
             _insuranceProvider.AddInsurance(insurance);
         }
+
+        public IEnumerable<TravelInsurance> GetDutchTravelInsurances()
+        {
+            return _insuranceProvider.GetDutchInsurances();
+        }
     }
 }

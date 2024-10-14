@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TheInsuranceCompany\TIC.WebAPI.csproj" />
     <ProjectReference Include="..\TIC.Domain\TIC.DomainAPI.csproj" />
   </ItemGroup>
 
